@@ -1,0 +1,179 @@
+.spin-container {
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  margin: 20px 0;
+}
+
+.tag-cursor-text {
+  cursor: text;
+}
+
+.ant-tag-has-color,
+.ant-tag-has-color a,
+.ant-tag-has-color a:hover,
+.ant-tag-has-color .anticon-close,
+.ant-tag-has-color .anticon-close:hover {
+  color: #170b0b;
+}
+
+.ant-form-item-label {
+  text-align: left;
+}
+
+.as-progress {
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
+}
+
+.antd-pro-charts-pie-pie.antd-pro-charts-pie-hasLegend
+  .antd-pro-charts-pie-chart {
+  width: 100%;
+  margin: 0 0 12px 0;
+}
+
+.antd-pro-charts-pie-pie .antd-pro-charts-pie-legend {
+  position: relative;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.report-chart {
+  border: 1px solid #e8e8e8;
+  margin: 1em;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.fullscreen-enabled {
+  background: #f0f2f5;
+  overflow: scroll !important;
+  padding: 1em 2em 2em;
+}
+
+.transactions-grid-upload {
+  .ant-upload-select-text {
+    width: 100%;
+  }
+}
+
+.antd-pro-charts-chart-card-meta {
+  span {
+    font-size: 19;
+  }
+}
+
+.dashboard-tv-card-title {
+  font-size: calc(0.7vw + 0.7vh + 0.5vmin);
+  margin: 0;
+  margin-bottom: 0.27em;
+  color: #0e0e0ec7;
+  border-bottom: solid #76b72f;
+}
+
+.dashboard-tv-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.dashboard-tv-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-size: calc(0.7vw + 0.7vh + 0.5vmin);
+    color: rgba(51, 51, 51, 0.85);
+    font-weight: 500;
+    margin-bottom: 0px;
+  }
+  p {
+    font-size: calc(1.5vw + 1.25vh + 1.5vmin);
+    margin-bottom: 0px;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .trend-absolute {
+    position: absolute;
+    right: -10%;
+    top: 5%;
+    color: rgba(0, 0, 0, 0.85);
+    span {
+      font-size: calc(0.55vw + 0.55vh + 0.55vmin);
+    }
+  }
+}
+
+.payout-actions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-(3rem/2));
+}
+
+.payout-action-item {
+  width: calc(25%);
+  margin: 0 (3rem/2);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: 0;
+  cursor: pointer;
+  white-space: normal;
+  height: auto;
+  padding: 1rem 1rem 1rem 1rem;
+
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease 0s;
+}
+
+.payout-actions-grid {
+  .ant-upload-select-text {
+    width: 100%;
+  }
+}
+
+.transactional-profile-dropdown__quantity {
+  width: 170px !important;
+}
+
+.transactional-profile-dropdown__third-parties {
+  width: 230px !important;
+}
+
+.transactional-profile-dropdown__amount {
+  width: 410px !important;
+}
+
+.transactional-profile-tab-title {
+  text-align: center;
+  color: rgb(102, 185, 242);
+  border-bottom: 2px solid rgb(102, 185, 242);
+  margin-bottom: 5px;
+}
+
+.has-error-message-custom {
+  color: #f5222d;
+}
+
+.has-error-field-custom {
+  border: 1px solid red;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background-color: #f9c32f;
+}
+
+.filter-required .ant-select-selection {
+  border-radius: 1px;
+  border-color: red;
+}
+
+.disabled-link {
+  pointer-events: none;
+}
