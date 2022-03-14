@@ -1,5 +1,21 @@
 import React from 'react';
-import { IDropdownType } from '../../no-state/merchantDocuments/models';
+export interface IDropdownType {
+    items: IDropdownItemType[];
+    registrationDropdownID: number;
+    code: string;
+    step: number;
+    propertyName: string;
+    translationCode: string;
+    isBoolean: boolean;
+    isCountryType: boolean;
+}
+export interface IDropdownItemType {
+    registrationDropdownItemID: number;
+    registrationDropdownID: number;
+    value: number;
+    translationCode: string;
+    isHighRisk: boolean;
+}
 
 const DropdownTypeContext = React.createContext<IDropdownType[]>([]);
 

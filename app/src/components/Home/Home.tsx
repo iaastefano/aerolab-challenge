@@ -28,7 +28,7 @@ const Home: React.FC<HomeProps & RouteComponentProps> = ({
 
           setProducts(response);
 
-        } catch (error) {
+        } catch (error: any) {
           if (error.message) {
             message.error(error.message);
           }

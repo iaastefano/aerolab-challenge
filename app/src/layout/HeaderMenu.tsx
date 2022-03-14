@@ -5,14 +5,14 @@ import ClientResourcesEnum from '../config/client';
 import { connect } from 'react-redux';
 import { IGlobalState } from '../state';
 import { APP_DISPLAY_NAME } from '../config/general-config';
-import { IUser } from '../no-state/users/models';
+import { getAuthProfile, IProfile } from '../state/auth';
 
 interface HeaderMenuProps {
-  user?: IUser;
+  profile?: IProfile;
 }
 
 const HeaderMenu: React.SFC<HeaderMenuProps & RouteComponentProps> = ({
-  user,
+  profile,
 }) => {
   return (
     <Layout.Header>
@@ -28,7 +28,7 @@ const HeaderMenu: React.SFC<HeaderMenuProps & RouteComponentProps> = ({
               className="mr1"
             />
             <span style={{ color: '#fff' }}>
-              {user && `${user.name}`}
+              {profile && `${profile.name}`}
             </span>
           </span>
         </Dropdown>
