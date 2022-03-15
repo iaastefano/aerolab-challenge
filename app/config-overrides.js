@@ -10,7 +10,6 @@ module.exports = function override(config, env) {
   config = rewireLess.withLoaderOptions({
     javascriptEnabled: true,
     modifyVars: {
-      '@primary-color': '#1F1D1C',
       '@border-radius-base': '0px',
       '@border-radius-sm': '2px',
       '@btn-height-base': '40px',
@@ -19,7 +18,6 @@ module.exports = function override(config, env) {
       '@input-height-base': '40px',
       '@input-height-lg': '48px',
       '@input-height-sm': '32px',
-      '@layout-header-background': '#1F1D1C',
     },
   })(config, env);
 
