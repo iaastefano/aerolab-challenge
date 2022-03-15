@@ -4,7 +4,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import { Dispatch } from 'redux';
-import logo from '../assets/logo-white.png';
 import ClientResourcesEnum from '../config/client';
 import MenuKeysEnum from '../config/menu-keys';
 import Translations from '../locales/translations';
@@ -12,6 +11,7 @@ import { IGlobalState } from '../state';
 import { toggleCollapse } from '../state/app/actions';
 import { IActionsApp, IActionToggleCollapse } from '../state/app/types';
 import { getAuthProfile, IProfile } from '../state/auth';
+import logo from "../assets/aerolab-logo-1.svg";
 
 export interface MenuItem {
   key: MenuKeysEnum;

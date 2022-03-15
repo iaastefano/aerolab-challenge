@@ -1,12 +1,10 @@
 import { ApiResourcesEnum } from '../config/api';
+import { IProfile } from '../state/auth/types';
 import FetchService from './FetchService';
-import {
-  IUser,
-} from '../no-state/users/models';
 
 class UserService {
-  public static fetchUser(): Promise<IUser> {
-    return FetchService.get<IUser>({
+  public static fetchUser(): Promise<IProfile> {
+    return FetchService.get<IProfile>({
       url: ApiResourcesEnum.USER_ME,
     });
   }

@@ -9,7 +9,6 @@ interface LayoutProps {}
 
 const Layout: React.SFC<LayoutProps> = props => (
   <AntLayout hasSider style={{ minHeight: '100vh' }}>
-    <SideMenu />
     <AntLayout>
       <HeaderMenu />
       <Content>{props.children}</Content>

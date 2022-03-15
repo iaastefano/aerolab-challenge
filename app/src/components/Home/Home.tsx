@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { message, Spin} from 'antd';
+import { Divider, message, Spin} from 'antd';
 import { connect } from 'react-redux';
 import { getAuthProfile, IProfile } from '../../state/auth';
 import { IProduct } from '../../no-state/products/models';
@@ -16,9 +16,15 @@ const Home: React.FC<HomeProps & RouteComponentProps> = ({
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState<IProduct[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [isProductsLoaded, setIsProductsLoaded] = useState(false);
 
   useEffect(
     () => {
+      const unique = (value: any, index: any, self: any) => {
+        return self.indexOf(value) === index
+      }
+
       const fetchProducts = async () => {
         try {
 
@@ -28,14 +34,23 @@ const Home: React.FC<HomeProps & RouteComponentProps> = ({
 
           setProducts(response);
 
-        } catch (error: any) {
+          let categories = response.map(product => product.category);
+ 
+          setCategories(categories.filter(unique));
+
+        } catch (error) {
           if (error.message) {
             message.error(error.message);
           }
         } finally {
+          setIsProductsLoaded(true);
           setIsLoading(false);
         }
       };
+
+      if(!isProductsLoaded){
+        fetchProducts();
+      }
     },
   );
 
@@ -46,9 +61,28 @@ const Home: React.FC<HomeProps & RouteComponentProps> = ({
           <Spin />
         </div>
       ) : (
-        <>
-        PRODUCTS
-        </>
+        <div>
+          PRODUCTS
+          <Divider></Divider>
+          {products.map(product => (
+            <>
+            <span>
+              {product.name}
+            </span>
+            <Divider></Divider>
+            </>
+          ))}
+          CATEGORIES
+          <Divider></Divider>
+          {categories.map(category => (
+            <>
+            <span>
+              {category}
+            </span>
+            <Divider></Divider>
+            </>
+          ))}
+        </div>
       )}
     </>
   );

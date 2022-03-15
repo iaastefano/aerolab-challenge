@@ -6,6 +6,8 @@ import ClientResourcesEnum from '../config/client';
 import NotFound from '../pages/NotFound/NotFound';
 import LoginPage from '../pages/Login/LoginPage';
 import HomePage from '../pages/Home/HomePage';
+import Logout from '../pages/Logout/Logout';
+
 
 interface RoutesProps {}
 
@@ -19,10 +21,12 @@ const Routes: React.FunctionComponent<RoutesProps> = () => (
         path={ClientResourcesEnum.LOGIN}
         component={LoginPage}
       />
+      <Route path={ClientResourcesEnum.LOGOUT} component={Logout} />
 
       <LoggedInRoute path={ClientResourcesEnum.ROOT} component={HomePage} />
 
       <Route component={NotFound} />
+
 
     </Switch>
   </BrowserRouter>

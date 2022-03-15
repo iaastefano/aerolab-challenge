@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import { IGlobalState } from '../state';
 import { APP_DISPLAY_NAME } from '../config/general-config';
 import { getAuthProfile, IProfile } from '../state/auth';
+import logo from "../assets/aerolab-logo-1.svg";
+import avatar from "../assets/avatar-default.png";
 
 interface HeaderMenuProps {
   profile?: IProfile;
@@ -16,15 +18,34 @@ const HeaderMenu: React.SFC<HeaderMenuProps & RouteComponentProps> = ({
 }) => {
   return (
     <Layout.Header>
-      <div className="f3 tl absolute white">{APP_DISPLAY_NAME}</div>
+      <div className='f3 tl absolute white'>
+        <Link to={ClientResourcesEnum.ROOT}>
+          <img
+            src={logo}
+            alt="Aerolab Shop"
+            className="pa2 db"
+            style={{ maxHeight: '5em', margin: '0 auto' }}
+            />
+        </Link>
+      </div>
       <div className="tr">
         <Dropdown
           className="dib"
+          overlay={
+            <Menu>
+              <Menu.Item key={ClientResourcesEnum.LOGOUT}>
+                <Link to={ClientResourcesEnum.LOGOUT}>
+                  <Icon type="logout" className="mr1" />
+                  <span>Logout</span>
+                </Link>
+              </Menu.Item>
+            </Menu>
+          }
         >
-          <span>
+          <span className='pointer'>
             <Avatar
-              size="small"
-              src="/../assets/img/avatar-default.jpg"
+              size="default"
+              src={avatar}
               className="mr1"
             />
             <span style={{ color: '#fff' }}>

@@ -1,6 +1,6 @@
 import React from 'react';
-import background from '../assets/background-login.jpg';
 import { Layout, Row, Col, Card } from 'antd';
+import background from '../assets/background-login.png';
 
 interface SecurityLayoutProps {
   title: string;

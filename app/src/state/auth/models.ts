@@ -1,3 +1,3 @@
-import { IUser } from '../../no-state/users/models';
+import { IProfile } from './types';
 
-export interface ILoginResponse extends IUser { }
+export interface ILoginResponse extends IProfile { }

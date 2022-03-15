@@ -14,6 +14,7 @@ const Translations: any = {
   TEXT_USERNAME: 'Username',
   TEXT_EMAIL: 'Email',
   TEXT_CONTACTS: 'Contacts',
+  TEXT_LOGIN: 'Log in',
 };
 
 

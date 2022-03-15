@@ -6,10 +6,16 @@ import {
   LOGOUT,
   UNAUTHORIZED,
 } from './constants';
-import { IUser } from '../../no-state/users/models';
 import { ILoginResponse } from './models';
+import { IRedeemHistoryItem } from '../../no-state/redeems/models';
 
-export interface IProfile extends IUser {}
+export interface IProfile {
+  id: string;
+  name: string;
+  points: string;
+  redeemHistory: IRedeemHistoryItem[];
+  createDate: string;
+}
 
 export interface IAuthState {
   isLoggingIn: boolean;

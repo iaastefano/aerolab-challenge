@@ -9,11 +9,13 @@ import FetchService from './FetchService';
 
 class AuthService {
   public static async login(
-    user,
-    email,
-    token,
+    user: string,
+    email: string,
+    token: string,
     callback: (error?: Error) => void
   ): Promise<ILoginResponse> {
+
+    console.log(user, email, token);
 
     const response = await FetchService.get<ILoginResponse>({
       url: ApiResourcesEnum.USER_ME,
